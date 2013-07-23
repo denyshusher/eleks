@@ -21,4 +21,14 @@ public class Variables {
 	public static String mediaUrl		=		"url";
 	public static String mediaWidth		=		"width";
 	public static String mediaHeight	=		"height";
+	
+//tab variables
+	public static String tab1Title		=		"Новости";
+	public static String tab2Title		=		"Задачи";
+	
+//log variables
+	public static String logCreateTable			=		"create table";
+	public static String logCreateTableValue	=		"onCreate database";
+	public static String logInsert				=		"insert";
+	public static String logInsertValue			=		"Insert in todoTable";
 }

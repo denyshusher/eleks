@@ -6,32 +6,28 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/noAbs"
     android:paddingRight="@dimen/noAbs"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/noAbs"
     android:background="@color/main_background"
     tools:context=".MainActivity" >
 
-    <Button
-        android:id="@+id/bashButton"
-        android:layout_width="wrap_content"
-        android:layout_height="80dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="@dimen/noAbs"
-        android:background="@color/button_background"
-        android:textColor="@color/text_color"
-        android:text="@string/Bash" />
-
-    <Button
-        android:id="@+id/bbcButton"
-        android:layout_width="wrap_content"
-        android:layout_height="80dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:background="@color/button_background"
-        android:textColor="@color/text_color"
-        android:layout_below="@+id/bashButton"
-        android:layout_marginTop="14dp"
-        android:text="@string/Bbc" />
-
+    <TabHost
+		 android:id="@android:id/tabhost"
+		 android:layout_width="match_parent"
+		 android:layout_height="match_parent">
+		 <LinearLayout
+			 android:layout_width="match_parent"
+			 android:layout_height="match_parent"
+			 android:orientation="vertical">
+			 <TabWidget
+				 android:id="@android:id/tabs"
+				 android:layout_width="match_parent"
+				 android:layout_height="wrap_content">
+			 </TabWidget>
+			 <FrameLayout
+				 android:id="@android:id/tabcontent"
+				 android:layout_width="match_parent"
+				 android:layout_height="match_parent">
+			 </FrameLayout>
+		 </LinearLayout>
+	</TabHost>
 </RelativeLayout>

@@ -7,5 +7,10 @@
     <string name="title_activity_second">SecondActivity</string>
     <string name="Bash">Bash</string>
     <string name="Bbc">BBC</string>
+    <string name="todo_head">Тема:</string>
+    <string name="todo_text">Содержание:</string>
+    <string name="todo_add">Добавить</string>
+    <string name="title_activity_todo">TodoActivity</string>
+    <string name="title_activity_news">NewsActivity</string>
 
 </resources>
