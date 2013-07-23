@@ -31,4 +31,13 @@ public class Variables {
 	public static String logCreateTableValue	=		"onCreate database";
 	public static String logInsert				=		"insert";
 	public static String logInsertValue			=		"Insert in todoTable";
+	public static String logSelect				=		"select";
+	public static String logSelectValue			=		"Select * from todoTable";
+	
+//db variables
+	public static String dbName			=		"DBTodo";
+	public static String tableName		=		"todoTable";
+	public static String headCol		=		"head";
+	public static String descriptionCol	=		"description";
+	public static String dateCol		=		"createDate";
 }

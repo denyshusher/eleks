@@ -10,17 +10,17 @@ import android.util.Log;
 public class DBHelper extends SQLiteOpenHelper{
 
 	public DBHelper(Context context) {
-		super(context, "DBTodo", null, 1);
+		super(context, Variables.dbName, null, 1);
 	}
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		Log.d(Variables.logCreateTable, Variables.logCreateTableValue);
-	    db.execSQL("create table todoTable ("
+	    db.execSQL("create table " + Variables.tableName + " ("
 	    	+ "id integer primary key autoincrement," 
-	        + "head text,"
-	        + "description text," 
-	        + "createDate text "+");");
+	        + Variables.headCol + " text,"
+	        + Variables.descriptionCol + " text," 
+	        + Variables.dateCol + " text "+");");
 	}
 
 	@Override

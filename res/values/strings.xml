@@ -12,5 +12,6 @@
     <string name="todo_add">Добавить</string>
     <string name="title_activity_todo">TodoActivity</string>
     <string name="title_activity_news">NewsActivity</string>
+    <string name="todo_view">Просмотр задач</string>
 
 </resources>
