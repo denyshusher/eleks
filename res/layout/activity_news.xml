@@ -31,5 +31,4 @@
         android:layout_below="@+id/bashButton"
         android:layout_marginTop="14dp"
         android:text="@string/Bbc" />
-
 </RelativeLayout>

@@ -49,10 +49,4 @@
 	        android:text="@string/todo_view" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tasksView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="" />
-
 </LinearLayout>

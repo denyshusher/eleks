@@ -13,5 +13,9 @@
     <string name="title_activity_todo">TodoActivity</string>
     <string name="title_activity_news">NewsActivity</string>
     <string name="todo_view">Просмотр задач</string>
+    <string name="title_activity_todo_view">TodoViewActivity</string>
+    <string name="title_activity_todo_show">TodoShowActivity</string>
+    <string name="title_activity_news_show">NewsShowActivity</string>
+    <string name="title_activity_bbc_show">BbcShowActivity</string>
 
 </resources>

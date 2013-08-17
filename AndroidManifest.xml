@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.elrain.downloadtest.NewsViewActivity"
+            android:name="com.elrain.downloadtest.BashActivity"
             android:label="@string/title_activity_second" >
         </activity>
         <activity
@@ -38,6 +38,22 @@
         <activity
             android:name="com.elrain.downloadtest.NewsActivity"
             android:label="@string/title_activity_news" >
+        </activity>
+        <activity
+            android:name="com.elrain.downloadtest.TodoListActivity"
+            android:label="@string/title_activity_todo_view" >
+        </activity>
+        <activity
+            android:name="com.elrain.downloadtest.TodoShowActivity"
+            android:label="@string/title_activity_todo_show" >
+        </activity>
+        <activity
+            android:name="com.elrain.downloadtest.BbcListActivity"
+            android:label="@string/title_activity_news_show" >
+        </activity>
+        <activity
+            android:name="com.elrain.downloadtest.BbcShowActivity"
+            android:label="@string/title_activity_bbc_show" >
         </activity>
     </application>
 

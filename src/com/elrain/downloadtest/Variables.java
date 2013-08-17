@@ -23,6 +23,8 @@ public class Variables {
 	public static String mediaHeight	=		"height";
 	
 //tab variables
+	public static String tab1Head		=		"tag1";
+	public static String tab2Head		=		"tag2";
 	public static String tab1Title		=		"Новости";
 	public static String tab2Title		=		"Задачи";
 	
@@ -37,7 +39,29 @@ public class Variables {
 //db variables
 	public static String dbName			=		"DBTodo";
 	public static String tableName		=		"todoTable";
+	public static String idCol			=		"id";
 	public static String headCol		=		"head";
 	public static String descriptionCol	=		"description";
 	public static String dateCol		=		"createDate";
+	
+//strings to toast
+	public static String enterTodoHead	=		"Введите тему";
+	public static String enterTodoDescr	=		"Введите содержание";
+	public static String todoAdd		=		"Задача добавлена";
+
+//todo Strings
+	public static String TodoHead	=		"Тема: ";
+	public static String TodoDescr	=		"Описание: ";
+	public static String TodoDate	=		"Дата создания: ";
+	
+//image
+	public static String imageDir	=		"/NewsApp/bbc/";
+	public static String imageName	=		"/image";
+	public static String imageType	=		".jpg";
+	
+//exceptions
+	public static String fileNotFound	=		"File not found";
+	
+//encoding type
+	public static String encodingType	=	"windows-1251";
 }

@@ -28,9 +28,8 @@ public class NewsActivity extends Activity implements OnClickListener{
         bbcBtn.setOnClickListener(this);
 	}
 
-	private void goToNewWindow(String site) {
-    	Intent secondActiv = new Intent(getApplicationContext(), NewsViewActivity.class);
-		secondActiv.putExtra(Variables.path, site);
+	private void goToNewWindow() {
+    	Intent secondActiv = new Intent(getApplicationContext(), BashActivity.class);
 		startActivity(secondActiv);
 	}
 
@@ -38,14 +37,19 @@ public class NewsActivity extends Activity implements OnClickListener{
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.bashButton:
-			goToNewWindow(Variables.bash);
+			goToNewWindow();
 			break;
 		case R.id.bbcButton:
-			goToNewWindow(Variables.bbc);
+			goToNewWindow2();
 			break;
 		default:
 			break;
 		}
 		
+	}
+	
+	private void goToNewWindow2() {
+    	Intent secondActiv = new Intent(getApplicationContext(), BbcListActivity.class);
+		startActivity(secondActiv);
 	}
 }

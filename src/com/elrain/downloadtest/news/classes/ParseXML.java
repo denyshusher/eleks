@@ -1,12 +1,12 @@
 package com.elrain.downloadtest.news.classes;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -20,8 +20,6 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-import android.os.Environment;
-
 import com.elrain.downloadtest.Variables;
 
 public class ParseXML{
@@ -31,13 +29,19 @@ public class ParseXML{
 	private Reader reader = null;
 	private List<Map<String,String>> newsList = new ArrayList<Map<String,String>>();
 	private Map<String,String> newsMap = new HashMap<String, String>();
+	private String urlAdress = "";
+	
+	public ParseXML(String _urlAdress){
+		this.urlAdress = _urlAdress;
+	}
 	
 	public List<Map<String,String>> getNews(){
 		try{
-			File root = Environment.getExternalStorageDirectory();
-			File file = new File(root +"/"+ Variables.filePath);
-			InputStream inputStream = new FileInputStream(file);
-			reader = new InputStreamReader(inputStream,"windows-1251");
+			URL url = new URL(urlAdress);
+			URLConnection urlConnection = url.openConnection();
+			
+			InputStream inputStream = urlConnection.getInputStream();
+			reader = new InputStreamReader(inputStream,Variables.encodingType);
 		}
 		catch(FileNotFoundException ex){
 			ex.printStackTrace();
@@ -47,7 +51,7 @@ public class ParseXML{
 		}
 		 
 		InputSource is = new InputSource(reader);
-		is.setEncoding("windows-1251");
+		is.setEncoding(Variables.encodingType);
 		
 		factory = SAXParserFactory.newInstance();
 		try{
@@ -90,7 +94,7 @@ public class ParseXML{
 			 
 				public void endElement(String uri, String localName, String qName) 
 						throws SAXException {
-					if(qName.equalsIgnoreCase("item")){
+					if(qName.equalsIgnoreCase(Variables.item)){
 						bitem = false;
 						newsList.add(newsMap);
 					}
